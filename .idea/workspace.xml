@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73506416-8ae5-4f38-ba31-725ddccd7739" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Changelog-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Changelog-server.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/AI_NPC.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/AI_NPC.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/Acciones.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/Acciones.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/Admin.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/Admin.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/Comercio.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/Comercio.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/Declares.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/Declares.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/FileIO.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/FileIO.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/FrmInterv.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/FrmInterv.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/GameLogic.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/GameLogic.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/Protocol.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/Protocol.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmAdmin.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmAdmin.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmCargando.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmCargando.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmConID.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmConID.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmDebugNpc.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmDebugNpc.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmMain.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmMain.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmServidor.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmServidor.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/frmUserList.frm" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/frmUserList.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/praetorians.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/praetorians.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/Codigo/wsksock.bas" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/Codigo/wsksock.bas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Codigo/SERVER.VBP" beforeDir="false" afterPath="$PROJECT_DIR$/Codigo/SERVER.VBP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dat/Balance.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Dat/Balance.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dat/Hechizos.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Dat/Hechizos.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dat/bkNpcs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Dat/bkNpcs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Server.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hechizos.dat" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,9 +39,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -80,6 +58,11 @@
               <item name="ao-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="ao-server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ao-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ao-server" type="462c0819:PsiDirectoryNode" />
+              <item name="Codigo" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -89,9 +72,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="two.files.diff.last.used.folder" value="$USER_HOME$/Downloads/Cliente y Servido 13.0 Dx8 con codigos/server" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/Dat/Hechizos.dat" />
+    <property name="two.files.diff.last.used.folder" value="$USER_HOME$/Desktop/Cliente y Servido 13.0 Dx8 con codigos/server" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,34 +101,35 @@
       <option name="presentableId" value="Default" />
       <updated>1534914847904</updated>
       <workItem from="1534914849090" duration="5615000" />
+      <workItem from="1534973115630" duration="1471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5615000" />
+    <option name="totallyTimeSpent" value="7086000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">

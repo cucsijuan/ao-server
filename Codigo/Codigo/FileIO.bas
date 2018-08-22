@@ -1,6 +1,6 @@
 Attribute VB_Name = "ES"
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -22,10 +22,10 @@ Attribute VB_Name = "ES"
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -131,7 +131,7 @@ Public Sub loadAdministrativeUsers()
 'Consejeros  => Consejero
 'RoleMasters => RM
 
-    'Si esta mierda tuviese array asociativos el código sería tan lindo.
+    'Si esta mierda tuviese array asociativos el cï¿½digo serï¿½a tan lindo.
     Dim buf As Integer
     Dim i As Long
     Dim Name As String
@@ -306,10 +306,10 @@ Public Sub CargarHechizos()
 '#               ATENCION PELIGRO                  #
 '###################################################
 '
-'  ¡¡¡¡ NO USAR GetVar PARA LEER Hechizos.dat !!!!
+'  ï¿½ï¿½ï¿½ï¿½ NO USAR GetVar PARA LEER Hechizos.dat !!!!
 '
-'El que ose desafiar esta LEY, se las tendrá que ver
-'con migo. Para leer Hechizos.dat se deberá usar
+'El que ose desafiar esta LEY, se las tendrï¿½ que ver
+'con migo. Para leer Hechizos.dat se deberï¿½ usar
 'la nueva clase clsLeerInis.
 '
 'Alejo
@@ -333,18 +333,18 @@ On Error GoTo ErrHandler
     
     frmCargando.cargar.min = 0
     frmCargando.cargar.max = NumeroHechizos
-    frmCargando.cargar.value = 0
+    frmCargando.cargar.Value = 0
     
     'Llena la lista
     For Hechizo = 1 To NumeroHechizos
         With Hechizos(Hechizo)
-            '.Nombre = Leer.GetValue("Hechizo" & Hechizo, "Nombre")
-            '.desc = Leer.GetValue("Hechizo" & Hechizo, "Desc")
-            '.PalabrasMagicas = Leer.GetValue("Hechizo" & Hechizo, "PalabrasMagicas")
+            .Nombre = Leer.GetValue("Hechizo" & Hechizo, "Nombre")
+            .desc = Leer.GetValue("Hechizo" & Hechizo, "Desc")
+            .PalabrasMagicas = Leer.GetValue("Hechizo" & Hechizo, "PalabrasMagicas")
             
-            '.HechizeroMsg = Leer.GetValue("Hechizo" & Hechizo, "HechizeroMsg")
-            '.TargetMsg = Leer.GetValue("Hechizo" & Hechizo, "TargetMsg")
-            '.PropioMsg = Leer.GetValue("Hechizo" & Hechizo, "PropioMsg")
+            .HechizeroMsg = Leer.GetValue("Hechizo" & Hechizo, "HechizeroMsg")
+            .TargetMsg = Leer.GetValue("Hechizo" & Hechizo, "TargetMsg")
+            .PropioMsg = Leer.GetValue("Hechizo" & Hechizo, "PropioMsg")
             
             .Tipo = val(Leer.GetValue("Hechizo" & Hechizo, "Tipo"))
             .WAV = val(Leer.GetValue("Hechizo" & Hechizo, "WAV"))
@@ -422,7 +422,7 @@ On Error GoTo ErrHandler
             .StaRequerido = val(Leer.GetValue("Hechizo" & Hechizo, "StaRequerido"))
             
             .Target = val(Leer.GetValue("Hechizo" & Hechizo, "Target"))
-            frmCargando.cargar.value = frmCargando.cargar.value + 1
+            frmCargando.cargar.Value = frmCargando.cargar.Value + 1
             
             .NeedStaff = val(Leer.GetValue("Hechizo" & Hechizo, "NeedStaff"))
             .StaffAffected = CBool(val(Leer.GetValue("Hechizo" & Hechizo, "StaffAffected")))
@@ -465,7 +465,8 @@ Public Sub DoBackUp()
 '***************************************************
 
     haciendoBK = True
-    
+    Dim i As Integer
+
     
     
     ' Lo saco porque elimina elementales y mascotas - Maraxus
@@ -483,9 +484,13 @@ Public Sub DoBackUp()
     
     Call SendData(SendTarget.ToAll, 0, PrepareMessagePauseToggle())
 
+
+    Call LimpiarMundo
     Call WorldSave
     Call modGuilds.v_RutinaElecciones
-    
+    Call ResetCentinelaInfo     'Reseteamos al centinela
+
+
     Call SendData(SendTarget.ToAll, 0, PrepareMessagePauseToggle())
     
     'Call EstadisticasWeb.Informar(EVENTO_NUEVO_CLAN, 0)
@@ -595,7 +600,7 @@ On Error Resume Next
     
                 If .TileExit.Map Then ByFlags = ByFlags Or 1
                 
-                ' No hacer backup de los NPCs inválidos (Pretorianos, Mascotas, Invocados )
+                ' No hacer backup de los NPCs invï¿½lidos (Pretorianos, Mascotas, Invocados )
                 If .NpcIndex Then
                     NpcInvalido = (Npclist(.NpcIndex).NPCtype = eNPCType.Pretoriano) Or (Npclist(.NpcIndex).MaestroUser > 0)
                     
@@ -724,9 +729,9 @@ Sub LoadBalance()
             .AtaqueArmas = val(GetVar(DatPath & "Balance.dat", "MODATAQUEARMAS", ListaClases(i)))
             .AtaqueProyectiles = val(GetVar(DatPath & "Balance.dat", "MODATAQUEPROYECTILES", ListaClases(i)))
             .AtaqueWrestling = val(GetVar(DatPath & "Balance.dat", "MODATAQUEWRESTLING", ListaClases(i)))
-            .DañoArmas = val(GetVar(DatPath & "Balance.dat", "MODDAÑOARMAS", ListaClases(i)))
-            .DañoProyectiles = val(GetVar(DatPath & "Balance.dat", "MODDAÑOPROYECTILES", ListaClases(i)))
-            .DañoWrestling = val(GetVar(DatPath & "Balance.dat", "MODDAÑOWRESTLING", ListaClases(i)))
+            .Daï¿½oArmas = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OARMAS", ListaClases(i)))
+            .Daï¿½oProyectiles = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OPROYECTILES", ListaClases(i)))
+            .Daï¿½oWrestling = val(GetVar(DatPath & "Balance.dat", "MODDAï¿½OWRESTLING", ListaClases(i)))
             .Escudo = val(GetVar(DatPath & "Balance.dat", "MODESCUDO", ListaClases(i)))
         End With
     Next i
@@ -747,7 +752,7 @@ Sub LoadBalance()
         ModVida(i) = val(GetVar(DatPath & "Balance.dat", "MODVIDA", ListaClases(i)))
     Next i
     
-    'Distribución de Vida
+    'Distribuciï¿½n de Vida
     For i = 1 To 5
         DistribucionEnteraVida(i) = val(GetVar(DatPath & "Balance.dat", "DISTRIBUCION", "E" + CStr(i)))
     Next i
@@ -800,10 +805,10 @@ Sub LoadOBJData()
 '#               ATENCION PELIGRO                  #
 '###################################################
 '
-'¡¡¡¡ NO USAR GetVar PARA LEER DESDE EL OBJ.DAT !!!!
+'ï¿½ï¿½ï¿½ï¿½ NO USAR GetVar PARA LEER DESDE EL OBJ.DAT !!!!
 '
-'El que ose desafiar esta LEY, se las tendrá que ver
-'con migo. Para leer desde el OBJ.DAT se deberá usar
+'El que ose desafiar esta LEY, se las tendrï¿½ que ver
+'con migo. Para leer desde el OBJ.DAT se deberï¿½ usar
 'la nueva clase clsLeerInis.
 '
 'Alejo
@@ -884,7 +889,7 @@ On Error GoTo ErrHandler
                 
                 Case eOBJType.otWeapon
                     .WeaponAnim = val(Leer.GetValue("OBJ" & Object, "Anim"))
-                    .Apuñala = val(Leer.GetValue("OBJ" & Object, "Apuñala"))
+                    .Apuï¿½ala = val(Leer.GetValue("OBJ" & Object, "Apuï¿½ala"))
                     .Envenena = val(Leer.GetValue("OBJ" & Object, "Envenena"))
                     .MaxHIT = val(Leer.GetValue("OBJ" & Object, "MaxHIT"))
                     .MinHIT = val(Leer.GetValue("OBJ" & Object, "MinHIT"))
@@ -1626,7 +1631,7 @@ Sub LoadSini()
     BootDelBackUp = val(GetVar(IniPath & "Server.ini", "INIT", "IniciarDesdeBackUp"))
     
     'Misc
-    
+
     Puerto = val(GetVar(IniPath & "Server.ini", "INIT", "StartPort"))
     HideMe = val(GetVar(IniPath & "Server.ini", "INIT", "Hide"))
     AllowMultiLogins = val(GetVar(IniPath & "Server.ini", "INIT", "AllowMultiLogins"))
@@ -1717,6 +1722,12 @@ Sub LoadSini()
     IntervaloUserPuedeCastear = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloLanzaHechizo"))
     FrmInterv.txtIntervaloLanzaHechizo.Text = IntervaloUserPuedeCastear
     
+    frmMain.TIMER_AI.Interval = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloNpcAI"))
+    FrmInterv.txtAI.Text = frmMain.TIMER_AI.Interval
+
+    frmMain.npcataca.Interval = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloNpcPuedeAtacar"))
+    FrmInterv.txtNPCPuedeAtacar.Text = frmMain.npcataca.Interval
+
     IntervaloUserPuedeTrabajar = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloTrabajo"))
     FrmInterv.txtTrabajo.Text = IntervaloUserPuedeTrabajar
     
@@ -1728,7 +1739,9 @@ Sub LoadSini()
     IntervaloGolpeMagia = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloGolpeMagia"))
     IntervaloGolpeUsar = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloGolpeUsar"))
     
-    
+    frmMain.tLluvia.Interval = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloPerdidaStaminaLluvia"))
+    FrmInterv.txtIntervaloPerdidaStaminaLluvia.Text = frmMain.tLluvia.Interval
+
     MinutosWs = val(GetVar(IniPath & "Server.ini", "INTERVALOS", "IntervaloWS"))
     If MinutosWs < 60 Then MinutosWs = 180
     
@@ -1742,7 +1755,7 @@ Sub LoadSini()
     
     '&&&&&&&&&&&&&&&&&&&&& FIN TIMERS &&&&&&&&&&&&&&&&&&&&&&&
       
-    RECORDusuarios = val(GetVar(IniPath & "Server.ini", "INIT", "RECORD"))
+    recordusuarios = val(GetVar(IniPath & "Server.ini", "INIT", "Record"))
       
     'Max users
     Temporal = val(GetVar(IniPath & "Server.ini", "INIT", "MaxUsers"))
@@ -1752,7 +1765,7 @@ Sub LoadSini()
     End If
     
     '&&&&&&&&&&&&&&&&&&&&& BALANCE &&&&&&&&&&&&&&&&&&&&&&&
-    'Se agregó en LoadBalance y en el Balance.dat
+    'Se agregï¿½ en LoadBalance y en el Balance.dat
     'PorcentajeRecuperoMana = val(GetVar(IniPath & "Server.ini", "BALANCE", "PorcentajeRecuperoMana"))
     
     ''&&&&&&&&&&&&&&&&&&&&& FIN BALANCE &&&&&&&&&&&&&&&&&&&&&&&
@@ -1799,20 +1812,20 @@ Sub LoadSini()
     Set ConsultaPopular = New ConsultasPopulares
     Call ConsultaPopular.LoadData
 
-    
+
     ' Admins
     Call loadAdministrativeUsers
-    
+
 End Sub
 
-Sub WriteVar(ByVal File As String, ByVal Main As String, ByVal Var As String, ByVal value As String)
+Sub WriteVar(ByVal File As String, ByVal Main As String, ByVal Var As String, ByVal Value As String)
 '***************************************************
 'Author: Unknown
 'Last Modification: -
 'Escribe VAR en un archivo
 '***************************************************
 
-writeprivateprofilestring Main, Var, value, File
+writeprivateprofilestring Main, Var, Value, File
     
 End Sub
 
@@ -1903,7 +1916,7 @@ With UserList(UserIndex)
     Call Manager.ChangeValue("FACCIONES", "NextRecompensa", CStr(.Faccion.NextRecompensa))
     
     
-    '¿Fueron modificados los atributos del usuario?
+    'ï¿½Fueron modificados los atributos del usuario?
     If Not .flags.TomoPocion Then
         For LoopC = 1 To UBound(.Stats.UserAtributos)
             Call Manager.ChangeValue("ATRIBUTOS", "AT" & LoopC, CStr(.Stats.UserAtributos(LoopC)))

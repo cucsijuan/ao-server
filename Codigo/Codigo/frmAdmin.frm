@@ -1,37 +1,33 @@
 VERSION 5.00
 Begin VB.Form frmAdmin 
-   BackColor       =   &H00FFC0C0&
-   BorderStyle     =   1  'Fixed Single
-   Caption         =   "Administración del servidor"
-   ClientHeight    =   2865
-   ClientLeft      =   45
-   ClientTop       =   435
+   BackColor       =   &H00C0C0C0&
+   Caption         =   "Administraciï¿½n del servidor"
+   ClientHeight    =   3135
+   ClientLeft      =   60
+   ClientTop       =   450
    ClientWidth     =   4680
    LinkTopic       =   "Form1"
-   MaxButton       =   0   'False
-   ScaleHeight     =   2865
+   ScaleHeight     =   3135
    ScaleWidth      =   4680
-   StartUpPosition =   2  'CenterScreen
-   Begin VB.Frame Frame1 
-      BackColor       =   &H00FFC0C0&
+   StartUpPosition =   3  'Windows Default
+   Begin VB.Frame Frame1
       Caption         =   "Personajes"
       BeginProperty Font 
          Name            =   "Tahoma"
          Size            =   8.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2535
+      Height          =   2895
       Index           =   0
       Left            =   240
       TabIndex        =   0
       Top             =   120
       Width           =   4215
-      Begin VB.TextBox Text1 
-         BackColor       =   &H00C0FFFF&
+      Begin VB.TextBox Text1
          Enabled         =   0   'False
          Height          =   495
          Left            =   480
@@ -41,69 +37,35 @@ Begin VB.Form frmAdmin
          Top             =   720
          Width           =   3135
       End
-      Begin VB.CommandButton Command3 
-         BackColor       =   &H00FFC0C0&
+      Begin VB.CommandButton Command3
          Caption         =   "Echar todos los PJS no privilegiados"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   495
+         Height          =   375
          Left            =   480
-         Style           =   1  'Graphical
          TabIndex        =   4
-         Top             =   1920
+         Top             =   2280
          Width           =   3135
       End
-      Begin VB.CommandButton Command2 
-         BackColor       =   &H00FFC0C0&
+      Begin VB.CommandButton Command2
          Caption         =   "R"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   315
          Left            =   3720
-         Style           =   1  'Graphical
          TabIndex        =   3
          Top             =   360
          Width           =   255
       End
-      Begin VB.ComboBox cboPjs 
-         BackColor       =   &H00C0FFFF&
+      Begin VB.ComboBox cboPjs
          Height          =   315
          Left            =   480
          TabIndex        =   2
          Top             =   360
          Width           =   3135
       End
-      Begin VB.CommandButton Command1 
-         BackColor       =   &H00FFC0C0&
+      Begin VB.CommandButton Command1
          Caption         =   "Echar"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   375
          Left            =   480
-         Style           =   1  'Graphical
          TabIndex        =   1
-         Top             =   1440
+         Top             =   1800
          Width           =   3135
       End
    End

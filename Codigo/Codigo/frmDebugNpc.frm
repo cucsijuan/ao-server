@@ -1,122 +1,56 @@
 VERSION 5.00
 Begin VB.Form frmDebugNpc 
-   BackColor       =   &H00FFC0C0&
-   BorderStyle     =   1  'Fixed Single
-   Caption         =   "Debug Npcs"
+   Caption         =   "DebugNpcs"
    ClientHeight    =   2460
-   ClientLeft      =   45
-   ClientTop       =   330
+   ClientLeft      =   60
+   ClientTop       =   345
    ClientWidth     =   4680
    LinkTopic       =   "Form1"
-   MaxButton       =   0   'False
    ScaleHeight     =   2460
    ScaleWidth      =   4680
-   StartUpPosition =   2  'CenterScreen
+   StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command2 
-      BackColor       =   &H00FFC0C0&
-      Cancel          =   -1  'True
-      Caption         =   "Salir (Esc)"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
+      Caption         =   "Salir"
       Height          =   300
       Left            =   90
-      Style           =   1  'Graphical
       TabIndex        =   5
       Top             =   2085
       Width           =   4455
    End
-   Begin VB.CommandButton Command1 
-      BackColor       =   &H00FFC0C0&
+   Begin VB.CommandButton Command1
       Caption         =   "ActualizarInfo"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   300
       Left            =   90
-      Style           =   1  'Graphical
       TabIndex        =   2
       Top             =   1755
       Width           =   4455
    End
-   Begin VB.Label Label4 
-      BackStyle       =   0  'Transparent
+   Begin VB.Label Label4
       Caption         =   "MaxNpcs:"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   285
       Left            =   90
       TabIndex        =   4
       Top             =   1380
       Width           =   4455
    End
-   Begin VB.Label Label3 
-      BackStyle       =   0  'Transparent
+   Begin VB.Label Label3
       Caption         =   "LastNpcIndex:"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   285
       Left            =   90
       TabIndex        =   3
       Top             =   1065
       Width           =   4455
    End
-   Begin VB.Label Label2 
-      BackStyle       =   0  'Transparent
+   Begin VB.Label Label2
       Caption         =   "Npcs Libres:"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   285
       Left            =   105
       TabIndex        =   1
       Top             =   720
       Width           =   4455
    End
-   Begin VB.Label Label1 
-      BackStyle       =   0  'Transparent
+   Begin VB.Label Label1
       Caption         =   "Npcs Activos:"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   285
       Left            =   90
       TabIndex        =   0
@@ -130,7 +64,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -152,10 +86,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 

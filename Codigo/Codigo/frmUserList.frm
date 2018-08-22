@@ -1,47 +1,23 @@
 VERSION 5.00
-Begin VB.Form frmUserList 
-   BackColor       =   &H00FFC0C0&
-   BorderStyle     =   1  'Fixed Single
+Begin VB.Form frmUserList
    Caption         =   "Debug de Userlist"
    ClientHeight    =   4665
-   ClientLeft      =   45
-   ClientTop       =   330
+   ClientLeft      =   60
+   ClientTop       =   345
    ClientWidth     =   5520
    LinkTopic       =   "Form1"
-   MaxButton       =   0   'False
    ScaleHeight     =   4665
    ScaleWidth      =   5520
-   StartUpPosition =   2  'CenterScreen
-   Begin VB.CommandButton Command2 
-      BackColor       =   &H00FFC0C0&
+   StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command2
       Caption         =   "Echar todos los no Logged"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   375
-      Left            =   2400
-      Style           =   1  'Graphical
+      Left            =   120
       TabIndex        =   4
       Top             =   4200
-      Width           =   3015
+      Width           =   2175
    End
-   Begin VB.TextBox Text2 
-      BackColor       =   &H00C0FFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
+   Begin VB.TextBox Text2
       Height          =   1095
       Left            =   2400
       Locked          =   -1  'True
@@ -51,17 +27,7 @@ Begin VB.Form frmUserList
       Top             =   3000
       Width           =   3015
    End
-   Begin VB.TextBox Text1 
-      BackColor       =   &H00C0FFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
+   Begin VB.TextBox Text1
       Height          =   2775
       Left            =   2400
       Locked          =   -1  'True
@@ -71,37 +37,16 @@ Begin VB.Form frmUserList
       Top             =   120
       Width           =   3015
    End
-   Begin VB.CommandButton Command1 
-      BackColor       =   &H00FFC0C0&
+   Begin VB.CommandButton Command1
       Caption         =   "Actualiza"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   375
       Left            =   120
-      Style           =   1  'Graphical
       TabIndex        =   1
-      Top             =   4200
+      Top             =   3720
       Width           =   2175
    End
    Begin VB.ListBox List1 
-      BackColor       =   &H00C0FFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   3960
+      Height          =   3570
       Left            =   120
       TabIndex        =   0
       Top             =   120

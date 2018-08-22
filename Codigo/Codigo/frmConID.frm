@@ -1,102 +1,46 @@
 VERSION 5.00
-Begin VB.Form frmConID 
-   BackColor       =   &H00FFC0C0&
-   BorderStyle     =   1  'Fixed Single
+Begin VB.Form frmConID
    Caption         =   "ConID"
    ClientHeight    =   4440
-   ClientLeft      =   45
-   ClientTop       =   330
+   ClientLeft      =   60
+   ClientTop       =   345
    ClientWidth     =   4680
    LinkTopic       =   "Form1"
-   MaxButton       =   0   'False
    ScaleHeight     =   4440
    ScaleWidth      =   4680
-   StartUpPosition =   2  'CenterScreen
-   Begin VB.CommandButton Command3 
-      BackColor       =   &H00FFC0C0&
+   StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command3
       Caption         =   "Liberar todos los slots"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   390
       Left            =   135
-      Style           =   1  'Graphical
       TabIndex        =   3
       Top             =   3495
       Width           =   4290
    End
-   Begin VB.CommandButton Command2 
-      BackColor       =   &H00FFC0C0&
+   Begin VB.CommandButton Command2
       Caption         =   "Ver estado"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   390
       Left            =   135
-      Style           =   1  'Graphical
       TabIndex        =   2
       Top             =   3030
       Width           =   4290
    End
-   Begin VB.ListBox List1 
-      BackColor       =   &H00C0FFFF&
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
+   Begin VB.ListBox List1
       Height          =   2205
       Left            =   180
       TabIndex        =   1
       Top             =   150
       Width           =   4215
    End
-   Begin VB.CommandButton Command1 
-      BackColor       =   &H00FFC0C0&
+   Begin VB.CommandButton Command1
       Caption         =   "Cerrar"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   390
       Left            =   120
-      Style           =   1  'Graphical
       TabIndex        =   0
       Top             =   3975
       Width           =   4290
    End
-   Begin VB.Label Label1 
-      BackStyle       =   0  'Transparent
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
+   Begin VB.Label Label1
       Height          =   510
       Left            =   180
       TabIndex        =   4
@@ -110,7 +54,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 'Argentum Online 0.12.2
-'Copyright (C) 2002 Márquez Pablo Ignacio
+'Copyright (C) 2002 Mï¿½rquez Pablo Ignacio
 '
 'This program is free software; you can redistribute it and/or modify
 'it under the terms of the Affero General Public License;
@@ -132,10 +76,10 @@ Attribute VB_Exposed = False
 'You can contact me at:
 'morgolock@speedy.com.ar
 'www.geocities.com/gmorgolock
-'Calle 3 número 983 piso 7 dto A
+'Calle 3 nï¿½mero 983 piso 7 dto A
 'La Plata - Pcia, Buenos Aires - Republica Argentina
-'Código Postal 1900
-'Pablo Ignacio Márquez
+'Cï¿½digo Postal 1900
+'Pablo Ignacio Mï¿½rquez
 
 Option Explicit
 
@@ -156,9 +100,9 @@ For i = 1 To MaxUsers
 Next i
 
 If c = MaxUsers Then
-    Label1.Caption = "¡No hay slots vacios!"
+    Label1.Caption = "ï¿½No hay slots vacios!"
 Else
-    Label1.Caption = "¡Hay " & MaxUsers - c & " slots vacios!"
+    Label1.Caption = "ï¿½Hay " & MaxUsers - c & " slots vacios!"
 End If
 
 End Sub

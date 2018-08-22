@@ -99,7 +99,7 @@ Private Sub GuardiasAI(ByVal NpcIndex As Integer, ByVal DelCaos As Boolean)
                                         Call ChangeNPCChar(NpcIndex, .Char.body, .Char.Head, headingloop)
                                     End If
                                     Exit Sub
-                                ElseIf .flags.AttackedBy = UserList(UI).Name And Not .flags.Follow Then
+                                ElseIf .flags.AttackedBy = UserList(UI).name And Not .flags.Follow Then
                                     
                                     If NpcAtacaUser(NpcIndex, UI) Then
                                         Call ChangeNPCChar(NpcIndex, .Char.body, .Char.Head, headingloop)
@@ -112,7 +112,7 @@ Private Sub GuardiasAI(ByVal NpcIndex As Integer, ByVal DelCaos As Boolean)
                                         Call ChangeNPCChar(NpcIndex, .Char.body, .Char.Head, headingloop)
                                     End If
                                     Exit Sub
-                                ElseIf .flags.AttackedBy = UserList(UI).Name And Not .flags.Follow Then
+                                ElseIf .flags.AttackedBy = UserList(UI).name And Not .flags.Follow Then
                                       
                                     If NpcAtacaUser(NpcIndex, UI) Then
                                         Call ChangeNPCChar(NpcIndex, .Char.body, .Char.Head, headingloop)
@@ -227,7 +227,7 @@ Private Sub HostilBuenoAI(ByVal NpcIndex As Integer)
                 If InMapBounds(nPos.Map, nPos.X, nPos.Y) Then
                     UI = MapData(nPos.Map, nPos.X, nPos.Y).UserIndex
                     If UI > 0 Then
-                        If UserList(UI).Name = .flags.AttackedBy Then
+                        If UserList(UI).name = .flags.AttackedBy Then
                         
                             UserProtected = Not IntervaloPermiteSerAtacado(UI) And UserList(UI).flags.NoPuedeSerAtacado
                             UserProtected = UserProtected Or UserList(UI).flags.Ignorado Or UserList(UI).flags.EnConsulta
@@ -317,7 +317,7 @@ Private Sub IrUsuarioCercano(ByVal NpcIndex As Integer)
             OwnerIndex = .Owner
             If OwnerIndex > 0 Then
                 
-                ' TODO: Es temporal hatsa reparar un bug que hace que ataquen a usuarios de otros mapas
+                ' TODO: Es temporal hasta reparar un bug que hace que ataquen a usuarios de otros mapas
                 If UserList(OwnerIndex).Pos.Map = .Pos.Map Then
                     
                     'Is it in it's range of vision??
@@ -345,7 +345,7 @@ Private Sub IrUsuarioCercano(ByVal NpcIndex As Integer)
                 
             End If
             
-            ' No le pertenece a nadie o el dueño no esta en el rango de vision, sigue a cualquiera
+            ' No le pertenece a nadie o el dueï¿½o no esta en el rango de vision, sigue a cualquiera
             For i = 1 To ModAreas.ConnGroups(.Pos.Map).CountEntrys
                 UserIndex = ModAreas.ConnGroups(.Pos.Map).UserEntrys(i)
                 
@@ -432,10 +432,10 @@ Private Sub SeguirAgresor(ByVal NpcIndex As Integer)
                 If Abs(UserList(UI).Pos.X - .Pos.X) <= RANGO_VISION_X And Sgn(UserList(UI).Pos.X - .Pos.X) = SignoEO Then
                     If Abs(UserList(UI).Pos.Y - .Pos.Y) <= RANGO_VISION_Y And Sgn(UserList(UI).Pos.Y - .Pos.Y) = SignoNS Then
 
-                        If UserList(UI).Name = .flags.AttackedBy Then
+                        If UserList(UI).name = .flags.AttackedBy Then
                             If .MaestroUser > 0 Then
                                 If Not criminal(.MaestroUser) And Not criminal(UI) And (UserList(.MaestroUser).flags.Seguro Or UserList(.MaestroUser).Faccion.ArmadaReal = 1) Then
-                                    Call WriteConsoleMsg(.MaestroUser, "La mascota no atacará a ciudadanos si eres miembro del ejército real o tienes el seguro activado.", FontTypeNames.FONTTYPE_INFO)
+                                    Call WriteConsoleMsg(.MaestroUser, "La mascota no atacarï¿½ a ciudadanos si eres miembro del ejï¿½rcito real o tienes el seguro activado.", FontTypeNames.FONTTYPE_INFO)
                                     Call FlushBuffer(.MaestroUser)
                                     .flags.AttackedBy = vbNullString
                                     Exit Sub
@@ -469,10 +469,10 @@ Private Sub SeguirAgresor(ByVal NpcIndex As Integer)
                 If Abs(UserList(UI).Pos.X - .Pos.X) <= RANGO_VISION_X Then
                     If Abs(UserList(UI).Pos.Y - .Pos.Y) <= RANGO_VISION_Y Then
                         
-                        If UserList(UI).Name = .flags.AttackedBy Then
+                        If UserList(UI).name = .flags.AttackedBy Then
                             If .MaestroUser > 0 Then
                                 If Not criminal(.MaestroUser) And Not criminal(UI) And (UserList(.MaestroUser).flags.Seguro Or UserList(.MaestroUser).Faccion.ArmadaReal = 1) Then
-                                    Call WriteConsoleMsg(.MaestroUser, "La mascota no atacará a ciudadanos si eres miembro del ejército real o tienes el seguro activado.", FontTypeNames.FONTTYPE_INFO)
+                                    Call WriteConsoleMsg(.MaestroUser, "La mascota no atacarï¿½ a ciudadanos si eres miembro del ejï¿½rcito real o tienes el seguro activado.", FontTypeNames.FONTTYPE_INFO)
                                     Call FlushBuffer(.MaestroUser)
                                     .flags.AttackedBy = vbNullString
                                     Call FollowAmo(NpcIndex)
@@ -742,6 +742,7 @@ Private Sub AiNpcAtacaNpc(ByVal NpcIndex As Integer)
                                 If .Numero = ELEMENTALFUEGO Then
                                     Call NpcLanzaUnSpellSobreNpc(NpcIndex, NI)
                                     If Npclist(NI).NPCtype = DRAGON Then
+                                        Npclist(NI).CanAttack = 1
                                         Call NpcLanzaUnSpellSobreNpc(NI, NpcIndex)
                                      End If
                                  Else
@@ -767,6 +768,7 @@ Private Sub AiNpcAtacaNpc(ByVal NpcIndex As Integer)
                                  If .Numero = ELEMENTALFUEGO Then
                                      Call NpcLanzaUnSpellSobreNpc(NpcIndex, NI)
                                      If Npclist(NI).NPCtype = DRAGON Then
+                                        Npclist(NI).CanAttack = 1
                                         Call NpcLanzaUnSpellSobreNpc(NI, NpcIndex)
                                      End If
                                  Else
@@ -805,7 +807,10 @@ Public Sub AiNpcObjeto(ByVal NpcIndex As Integer)
 '14/09/2009: ZaMa - Now npcs don't follow protected users.
 '***************************************************
     Dim UserIndex As Integer
+    Dim tHeading As Byte
     Dim i As Long
+    Dim SignoNS As Integer
+    Dim SignoEO As Integer
     Dim UserProtected As Boolean
     
     With Npclist(NpcIndex)
@@ -940,14 +945,7 @@ On Error GoTo ErrorHandler
 Exit Sub
 
 ErrorHandler:
-    With Npclist(NpcIndex)
-        Call LogError("Error en NPCAI. Error: " & Err.Number & " - " & Err.description & ". " & _
-        "Npc: " & .Name & ", Index: " & NpcIndex & ", MaestroUser: " & .MaestroUser & _
-        ", MaestroNpc: " & .MaestroNpc & ", Mapa: " & .Pos.Map & " x:" & .Pos.X & " y:" & _
-        .Pos.Y & " Mov:" & .Movement & " TargU:" & _
-        .Target & " TargN:" & .TargetNPC)
-    End With
-    
+    Call LogError("NPCAI " & Npclist(NpcIndex).name & " " & Npclist(NpcIndex).MaestroUser & " " & Npclist(NpcIndex).MaestroNpc & " mapa:" & Npclist(NpcIndex).Pos.Map & " x:" & Npclist(NpcIndex).Pos.X & " y:" & Npclist(NpcIndex).Pos.Y & " Mov:" & Npclist(NpcIndex).Movement & " TargU:" & Npclist(NpcIndex).Target & " TargN:" & Npclist(NpcIndex).TargetNPC)
     Dim MiNPC As npc
     MiNPC = Npclist(NpcIndex)
     Call QuitarNPC(NpcIndex)
